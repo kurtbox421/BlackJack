@@ -8,28 +8,39 @@
 import Foundation
 
 struct Deck {
-    private(set) var cards: [Card] = Deck.fullDeck()
+    private(set) var cards: [Card]
+    private(set) var numberOfDecks: Int
 
-    init(shuffled: Bool = true) {
+    var totalCards: Int { numberOfDecks * 52 }
+    var remainingCards: Int { cards.count }
+
+    init(numberOfDecks: Int = 1, shuffled: Bool = true) {
+        self.numberOfDecks = max(1, numberOfDecks)
+        self.cards = Deck.fullDeck(numberOfDecks: self.numberOfDecks)
         if shuffled {
             cards.shuffle()
         }
     }
 
     mutating func drawCard() -> Card? {
-        if cards.isEmpty {
-            // Rebuild and reshuffle a fresh deck when we run out of cards.
-            cards = Deck.fullDeck()
-            cards.shuffle()
-        }
+        // Do not auto-reshuffle here; the view model manages shoe penetration.
         return cards.popLast()
     }
 
-    private static func fullDeck() -> [Card] {
+    mutating func reshuffle(shuffled: Bool = true) {
+        cards = Deck.fullDeck(numberOfDecks: numberOfDecks)
+        if shuffled {
+            cards.shuffle()
+        }
+    }
+
+    private static func fullDeck(numberOfDecks: Int) -> [Card] {
         var newDeck: [Card] = []
-        for suit in Suit.allCases {
-            for rank in Rank.allCases {
-                newDeck.append(Card(suit: suit, rank: rank))
+        for _ in 0..<max(1, numberOfDecks) {
+            for suit in Suit.allCases {
+                for rank in Rank.allCases {
+                    newDeck.append(Card(suit: suit, rank: rank))
+                }
             }
         }
         return newDeck
