@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+enum GamePhase {
+    case betting
+    case playerTurn
+    case dealerTurn
+    case roundOver
+}
+
+enum RoundResult {
+    case win
+    case lose
+    case push
+    case blackjack
+}
