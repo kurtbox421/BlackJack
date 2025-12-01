@@ -101,6 +101,10 @@ final class BlackjackGameViewModel: ObservableObject {
         bet = max(0, min(bankroll, bet + amount))
     }
 
+    func placeBet(_ amount: Int) {
+        adjustBet(by: amount)
+    }
+
     func clearBet() {
         guard phase == .betting else { return }
         bet = 0
@@ -160,6 +164,10 @@ final class BlackjackGameViewModel: ObservableObject {
         dealerHand = Hand()
         phase = .betting
         bet = min(max(defaultBet, bet), bankroll)
+    }
+
+    func nextRound() {
+        nextHand()
     }
 
     func resetBankrollAndStats() {
