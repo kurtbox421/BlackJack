@@ -6,17 +6,34 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3965C6572EDD2C280040CBA6 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3965C6522EDD2C280040CBA6 /* StatsView.swift */; };
+		3965C6582EDD2C280040CBA6 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3965C64C2EDD2C280040CBA6 /* Hand.swift */; };
+		3965C6592EDD2C280040CBA6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3965C6512EDD2C280040CBA6 /* SettingsView.swift */; };
+		3965C65A2EDD2C280040CBA6 /* Gamestate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3965C64B2EDD2C280040CBA6 /* Gamestate.swift */; };
+		3965C65B2EDD2C280040CBA6 /* BlackJackGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3965C64F2EDD2C280040CBA6 /* BlackJackGameView.swift */; };
+		3965C65C2EDD2C280040CBA6 /* BlackjackGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3965C6542EDD2C280040CBA6 /* BlackjackGameViewModel.swift */; };
+		3965C65D2EDD2C280040CBA6 /* BlackjackRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3965C6502EDD2C280040CBA6 /* BlackjackRootView.swift */; };
+		3965C65F2EDD2C280040CBA6 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3965C6492EDD2C280040CBA6 /* Card.swift */; };
+		3965C6612EDD2C280040CBA6 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3965C64A2EDD2C280040CBA6 /* Deck.swift */; };
+		3965C6622EDD2C280040CBA6 /* BlackJackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3965C64E2EDD2C280040CBA6 /* BlackJackApp.swift */; };
+		3965C6642EDD2C5D0040CBA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3965C6632EDD2C5D0040CBA6 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		3965C6492EDD2C280040CBA6 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		3965C64A2EDD2C280040CBA6 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		3965C64B2EDD2C280040CBA6 /* Gamestate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gamestate.swift; sourceTree = "<group>"; };
+		3965C64C2EDD2C280040CBA6 /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
+		3965C64E2EDD2C280040CBA6 /* BlackJackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackApp.swift; sourceTree = "<group>"; };
+		3965C64F2EDD2C280040CBA6 /* BlackJackGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackGameView.swift; sourceTree = "<group>"; };
+		3965C6502EDD2C280040CBA6 /* BlackjackRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackRootView.swift; sourceTree = "<group>"; };
+		3965C6512EDD2C280040CBA6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3965C6522EDD2C280040CBA6 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		3965C6542EDD2C280040CBA6 /* BlackjackGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackGameViewModel.swift; sourceTree = "<group>"; };
+		3965C6632EDD2C5D0040CBA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39B8DCCC2EDD20E9005D0E08 /* BlackJack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackJack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		39B8DCCE2EDD20E9005D0E08 /* BlackJack */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BlackJack;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		39B8DCC92EDD20E9005D0E08 /* Frameworks */ = {
@@ -29,10 +46,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3965C64D2EDD2C280040CBA6 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				3965C6492EDD2C280040CBA6 /* Card.swift */,
+				3965C64A2EDD2C280040CBA6 /* Deck.swift */,
+				3965C64B2EDD2C280040CBA6 /* Gamestate.swift */,
+				3965C64C2EDD2C280040CBA6 /* Hand.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		3965C6532EDD2C280040CBA6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3965C64E2EDD2C280040CBA6 /* BlackJackApp.swift */,
+				3965C64F2EDD2C280040CBA6 /* BlackJackGameView.swift */,
+				3965C6502EDD2C280040CBA6 /* BlackjackRootView.swift */,
+				3965C6512EDD2C280040CBA6 /* SettingsView.swift */,
+				3965C6522EDD2C280040CBA6 /* StatsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3965C6552EDD2C280040CBA6 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				3965C6542EDD2C280040CBA6 /* BlackjackGameViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		3965C6562EDD2C280040CBA6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3965C64D2EDD2C280040CBA6 /* models */,
+				3965C6532EDD2C280040CBA6 /* View */,
+				3965C6552EDD2C280040CBA6 /* View Model */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		39B8DCC32EDD20E9005D0E08 = {
 			isa = PBXGroup;
 			children = (
-				39B8DCCE2EDD20E9005D0E08 /* BlackJack */,
+				3965C6632EDD2C5D0040CBA6 /* Assets.xcassets */,
+				3965C6562EDD2C280040CBA6 /* Sources */,
 				39B8DCCD2EDD20E9005D0E08 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,9 +118,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				39B8DCCE2EDD20E9005D0E08 /* BlackJack */,
 			);
 			name = BlackJack;
 			packageProductDependencies = (
@@ -109,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3965C6642EDD2C5D0040CBA6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +176,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3965C6572EDD2C280040CBA6 /* StatsView.swift in Sources */,
+				3965C6582EDD2C280040CBA6 /* Hand.swift in Sources */,
+				3965C6592EDD2C280040CBA6 /* SettingsView.swift in Sources */,
+				3965C65A2EDD2C280040CBA6 /* Gamestate.swift in Sources */,
+				3965C65B2EDD2C280040CBA6 /* BlackJackGameView.swift in Sources */,
+				3965C65C2EDD2C280040CBA6 /* BlackjackGameViewModel.swift in Sources */,
+				3965C65D2EDD2C280040CBA6 /* BlackjackRootView.swift in Sources */,
+				3965C65F2EDD2C280040CBA6 /* Card.swift in Sources */,
+				3965C6612EDD2C280040CBA6 /* Deck.swift in Sources */,
+				3965C6622EDD2C280040CBA6 /* BlackJackApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
