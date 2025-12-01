@@ -10,6 +10,10 @@ import Foundation
 struct Hand {
     var cards: [Card] = []
 
+    init(cards: [Card] = []) {
+        self.cards = cards
+    }
+
     var values: (total: Int, isSoft: Bool) {
         var total = 0
         var aces = 0

@@ -19,4 +19,5 @@ enum RoundResult {
     case lose
     case push
     case blackjack
+    case surrender
 }
